@@ -170,9 +170,10 @@
 
 .m-menu {
   position: fixed;
-  top: 94vh;
+  bottom: 0;
   left: 0;
   width: 100%;
+  height: 8vh;
   opacity: 1;
   visibility: hidden;
   overflow: hidden;
