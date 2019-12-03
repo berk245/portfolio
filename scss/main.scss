@@ -311,6 +311,10 @@ body {
   .contact-icons {
     a {
       margin-right: 1.5rem;
+      &:hover {
+        color: $secondary-color;
+        @include easeOut;
+      }
     }
     margin-top: 2.5rem;
     margin-left: 0.2rem;
