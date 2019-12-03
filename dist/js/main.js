@@ -13,7 +13,7 @@ let showMenu = false;
 window.onload = function() {
   this.setTimeout(() => {
     this.toggleMenu();
-  }, 1300);
+  }, 1000);
 };
 menuBtn.addEventListener("click", toggleMenu);
 mainBdy.addEventListener("onscroll", toggleMenu);
