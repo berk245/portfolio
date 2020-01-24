@@ -229,6 +229,7 @@ a {
   top: 0;
   width: 100%;
   text-align: right;
+  z-index: 5;
   background: linear-gradient(87deg, #2c3237 0%, rgba(44, 50, 55, 0.9) 20%);
   height: 2.8rem;
   padding: 0.5rem; }
@@ -326,9 +327,13 @@ body {
       #about .contain .bio .heads {
         margin-right: 1rem;
         flex-basis: 100%; }
-        #about .contain .bio .heads img {
-          height: 100%;
-          width: 100%; }
+        #about .contain .bio .heads .headshot {
+          z-index: 0;
+          height: 70%;
+          width: 80%;
+          position: relative;
+          top: 15%;
+          left: 10%; }
       #about .contain .bio .bio-text {
         text-align: justify;
         padding: 1rem;
@@ -351,15 +356,16 @@ body {
       margin-left: 2.5rem;
       margin-top: 5rem; }
       #about .contain .projects .project {
-        flex-basis: 30%;
+        flex-basis: 40%;
         background-color: rgba(44, 50, 55, 0.5);
-        margin-left: 20px;
+        margin-left: 10px;
         margin-bottom: 5rem;
         padding: 2rem; }
-        #about .contain .projects .project1, #about .contain .projects .project4 {
+        #about .contain .projects .project1, #about .contain .projects .project3 {
           margin-left: -2.5rem; }
         #about .contain .projects .project img {
-          width: 100%; }
+          width: 100%;
+          height: 20rem; }
       #about .contain .projects .project-headers {
         margin-left: 0.3rem;
         margin-bottom: 2rem; }
@@ -432,9 +438,12 @@ body {
     margin-top: 28vh; }
     .menu-nav .noPhone {
       font-size: 0.8 rem; }
+  #about .contain .bio .bio-text {
+    font-size: 0.9rem; }
   #about .contain .bio .heads {
-    flex-basis: 300%;
-    height: 70%; } }
+    flex-basis: 400%; }
+    #about .contain .bio .heads .headshot {
+      height: 50%; } }
 
 @media screen and (max-width: 768px) {
   main {
@@ -478,6 +487,8 @@ body {
         padding: 1rem; }
         #about .contain .bio .heads .headshot {
           margin-left: 1rem; }
+          #about .contain .bio .heads .headshot img {
+            height: 20%; }
       #about .contain .pro-title {
         margin-top: 4rem;
         font-size: 3rem;
