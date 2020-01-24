@@ -50,9 +50,14 @@
   #about {
     .contain {
       .bio {
+        .bio-text {
+          font-size: 0.9rem;
+        }
         .heads {
-          flex-basis: 300%;
-          height: 70%;
+          flex-basis: 400%;
+          .headshot {
+            height: 50%;
+          }
         }
       }
     }
@@ -124,6 +129,9 @@
         .heads {
           .headshot {
             margin-left: 1rem;
+            img {
+              height: 20%;
+            }
           }
         }
       }
