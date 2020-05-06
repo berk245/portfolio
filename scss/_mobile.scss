@@ -18,6 +18,7 @@
     }
   }
   #about {
+    overflow: hidden;
     .contain {
       .bio {
         .heads {
@@ -188,8 +189,8 @@
     &-btn {
       &.close {
         padding: 0.7rem;
-        right: 0;
-        bottom: 1.4vh;
+        margin-left: 10px;
+        bottom: 2.4vh;
       }
     }
     &.show {
@@ -257,7 +258,6 @@
       color: $secondary-color;
     }
   }
-
   //About Page
 
   .bio-text {
@@ -299,7 +299,7 @@
       .pro-title {
         margin-top: 4rem;
         margin-bottom: -3rem;
-        margin-left: -6rem;
+        margin-left: -8rem;
       }
       .projects {
         flex-direction: column;
@@ -308,7 +308,7 @@
 
         .project {
           width: 95%;
-          padding: 0.5rem;
+          padding: 1rem;
           margin-left: 0rem;
           margin-bottom: 1rem;
         }
@@ -340,6 +340,46 @@
       }
       margin-left: 3rem;
       margin-top: 5rem;
+    }
+  }
+}
+
+@include mediaXs {
+  #main-header {
+    .fix-name {
+      margin-left: 0;
+    }
+  }
+  #home {
+    padding: 2rem;
+    .icons {
+      margin-left: 0.9rem;
+    }
+    .leftSide {
+      width: 100vw;
+      margin-left: -2.1rem;
+    }
+  }
+
+  #about {
+    .contain {
+      margin-left: 0.75rem;
+      .bio {
+      }
+      .pro-title {
+        font-size: 2.5rem;
+        margin-left: -9.75rem;
+      }
+
+      .projects {
+        margin-left: 0;
+        .project {
+          padding: 1rem;
+        }
+        .headshot {
+          height: 14rem !important;
+        }
+      }
     }
   }
 }

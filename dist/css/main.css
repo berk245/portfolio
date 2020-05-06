@@ -117,7 +117,7 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 8vh;
+  height: 10vh;
   opacity: 1;
   visibility: hidden;
   overflow: hidden; }
@@ -135,7 +135,7 @@
     justify-content: center;
     float: right;
     width: 100%;
-    height: 8vh;
+    height: 10vh;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -423,9 +423,11 @@ body {
       font-size: 6rem;
       line-height: 1;
       margin-bottom: 1rem; }
-  #about .contain .bio .heads {
-    flex-basis: 200%;
-    height: auto; } }
+  #about {
+    overflow: hidden; }
+    #about .contain .bio .heads {
+      flex-basis: 200%;
+      height: auto; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   main {
@@ -525,8 +527,8 @@ body {
         margin-bottom: 3rem; }
   .m-menu-btn.close {
     padding: 0.7rem;
-    right: 0;
-    bottom: 1.4vh; }
+    margin-left: 10px;
+    bottom: 2.4vh; }
   .m-menu.show {
     visibility: visible; }
   .menu-btn {
@@ -590,14 +592,14 @@ body {
       #about .contain .pro-title {
         margin-top: 4rem;
         margin-bottom: -3rem;
-        margin-left: -6rem; }
+        margin-left: -8rem; }
       #about .contain .projects {
         flex-direction: column;
         margin-left: 0.5rem;
         margin-right: 0.5rem; }
         #about .contain .projects .project {
           width: 95%;
-          padding: 0.5rem;
+          padding: 1rem;
           margin-left: 0rem;
           margin-bottom: 1rem; }
   #contact {
@@ -617,3 +619,25 @@ body {
       #contact .contact-icons a {
         margin-right: 3rem;
         color: #eece1a; } }
+
+@media screen and (max-width: 400px) {
+  #main-header .fix-name {
+    margin-left: 0; }
+  #home {
+    padding: 2rem; }
+    #home .icons {
+      margin-left: 0.9rem; }
+    #home .leftSide {
+      width: 100vw;
+      margin-left: -2.1rem; }
+  #about .contain {
+    margin-left: 0.75rem; }
+    #about .contain .pro-title {
+      font-size: 2.5rem;
+      margin-left: -9.75rem; }
+    #about .contain .projects {
+      margin-left: 0; }
+      #about .contain .projects .project {
+        padding: 1rem; }
+      #about .contain .projects .headshot {
+        height: 14rem !important; } }
