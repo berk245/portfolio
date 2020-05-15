@@ -168,8 +168,8 @@ body {
   // * {
   //   font-family: "Libre Franklin", sans-serif;
   // }
-
   min-height: 100vh;
+  overflow: hidden;
   align-items: center;
   background: linear-gradient(
     180deg,
@@ -178,9 +178,9 @@ body {
   );
 
   .contain {
-    margin-top: 5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    // margin-top: 5rem;
+    // margin-left: 2rem;
+    // margin-right: 2rem;
     width: 95%;
     display: flex;
     flex-direction: column;
@@ -199,11 +199,11 @@ body {
 
         .headshot {
           z-index: 0;
-          height: 70%;
-          width: 80%;
+          height: auto;
+          width: 100%;
           position: relative;
           top: 15%;
-          left: 10%;
+          left: 0%;
         }
       }
       .bio-text {
@@ -220,9 +220,14 @@ body {
         }
       }
     }
+  }
+}
+
+#my-projects {
+  .contain {
     .pro-title {
       margin-top: 10rem;
-      font-size: 4rem;
+      font-size: 1rem;
       margin-bottom: -1rem;
     }
     .projects {
@@ -253,7 +258,7 @@ body {
         padding: 2rem;
         img {
           width: 100%;
-          height: 20rem;
+          height: 1rem;
           //margin-left: 4rem;
         }
       }
@@ -297,6 +302,11 @@ body {
       }
     }
   }
+  background: linear-gradient(
+    180deg,
+    rgba(44, 50, 55, 0) 0%,
+    rgba(19, 21, 23, 1) 70%
+  );
 }
 
 // Contact Page

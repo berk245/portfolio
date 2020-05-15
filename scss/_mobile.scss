@@ -1,20 +1,25 @@
-//Widescreen
-
-@include mediaXl {
+@include desktop-up {
   main {
     align-items: center;
 
     .leftSide {
       &.half {
+        text-align: left;
         width: 70vw;
         @include easeOut;
       }
     }
 
     .lg-heading {
-      font-size: 6rem;
+      font-size: 6.5vw;
       line-height: 1;
       margin-bottom: 1rem;
+    }
+    .sm-heading {
+      font-size: 1.8vw;
+    }
+    .univ-info {
+      font-size: 1.6vw;
     }
   }
   #about {
@@ -22,16 +27,34 @@
     .contain {
       .bio {
         .heads {
-          flex-basis: 200%;
+          flex-basis: 100%;
           height: auto;
         }
       }
     }
   }
+  #my-projects {
+    .contain {
+      .projects {
+        padding: 0.5rem;
+        margin-left: 0;
+        font-size: 0.95rem;
+        .project {
+          flex-basis: 30% !important;
+          margin-left: 0;
+          padding: 0.5rem;
+          .headshot {
+            height: 15vw !important;
+            width: 100%;
+          }
+        }
+        .project1 {
+        }
+      }
+    }
+  }
 }
-//Desk/Laptop
-
-@include mediaLg {
+@include tablet-landscape-up {
   main {
     align-items: center;
 
@@ -49,35 +72,80 @@
     }
   }
   #about {
+    overflow: scroll;
+    width: 100%;
     .contain {
+      margin: 5rem 0 0 2.5%;
+      height: 60vh;
       .bio {
+        display: grid !important;
+        grid-template-columns: 40% 60%;
+
         .bio-text {
-          font-size: 0.9rem;
+          font-size: 1.25rem;
+          font-weight: 400;
+        }
+        .bottom-text {
+          font-size: 1.25rem;
+          font-weight: 400;
+          padding: 0 1rem 0 1rem;
+          text-align: justify;
+          grid-column: 1 /-1;
         }
         .heads {
-          flex-basis: 400%;
           .headshot {
-            height: 50%;
+            height: auto;
+            width: 80%;
+            top: 10%;
+            left: 10%;
           }
         }
       }
     }
   }
+  #my-projects {
+    .contain {
+      .projects {
+        padding: 0.5rem;
+        margin-left: 0;
+        font-size: 0.95rem;
+        .project {
+          flex-basis: 45%;
+          margin-left: 0;
+          padding: 0.5rem;
+          .headshot {
+            height: 30vw;
+            width: 100%;
+          }
+        }
+        .project1 {
+        }
+      }
+    }
+  }
 }
-//Tablets/Small Laptops
-
-@include mediaMd {
+@include tablet-portrait-only {
   main {
     align-items: center;
     text-align: center;
-
+    margin-bottom: -1rem;
     .leftSide {
-      margin-top: -3rem;
+      margin-top: -5vw;
     }
     .lg-heading {
-      font-size: 65px;
+      margin-top: 15vh !important;
+      font-size: 4.25rem;
       line-height: 1;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+    .sm-heading {
+      font-size: 1.8rem;
+      margin-left: 0;
+    }
+    .univ-info {
+      margin-left: 0;
+      margin-bottom: 2.25rem;
+      font-size: 1.4rem;
     }
     .icons {
       margin-left: 1.8rem;
@@ -93,7 +161,7 @@
     transform: translate3d(100%, 0%, 0);
   }
   .menu-nav {
-    margin: 0;
+    margin: -3vw;
     transform: translate3d(0%, 0, 0);
     margin-top: 3vh;
     .noPhone {
@@ -119,45 +187,53 @@
     );
 
     .contain {
-      width: 95vw;
+      width: 100vw;
       margin-left: 0.6rem;
       margin-top: 5rem;
       align-self: center;
 
       .bio {
-        flex-direction: column;
-        padding: 1rem;
-        .heads {
-          .headshot {
-            margin-left: 1rem;
-            img {
-              height: 20%;
-            }
-          }
-        }
-      }
-      .pro-title {
-        margin-top: 4rem;
-        font-size: 3rem;
-        margin-bottom: -2rem;
-        margin-left: -3.5rem;
-      }
-      .projects {
+        width: 95%;
+        margin-top: -0rem;
+        margin-left: -1.5rem;
         flex-direction: column;
 
+        .heads {
+          .headshot {
+            margin-left: 0.5rem;
+            padding: 2rem;
+          }
+        }
+        .bio-text {
+          padding: 0 2.5rem 2.5rem 2.5rem;
+          font-weight: 400;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+  #my-projects {
+    .contain {
+      .projects {
+        padding: 0.5rem;
+        margin-left: 0;
+        font-size: 0.95rem;
         .project {
-          width: 95%;
-          padding: 1rem;
-          margin-left: 1rem;
-          margin-bottom: 1rem;
+          flex-basis: 45%;
+          margin-left: 0;
+          padding: 0.5rem;
+          .headshot {
+            height: 30vw;
+            width: 100%;
+          }
+        }
+        .project1 {
         }
       }
     }
   }
 }
-//Smartphones
-
-@include mediaSm {
+@include phone-portrait-only {
   main {
     text-align: center;
     .noPhone {
@@ -167,37 +243,48 @@
     .leftSide {
       height: auto;
       width: 90vw;
-      margin-top: -3rem;
+      margin-top: -3vh;
       margin-left: -2.5rem;
       .lg-heading {
-        font-size: 3.5rem;
         font-weight: 600;
-        font-size: 65px;
-        margin-bottom: 3rem;
+        font-size: 12vw;
+        margin-bottom: 2rem;
       }
       .sm-heading {
-        font-size: 1.4rem;
+        font-size: 5vw;
         margin-bottom: 1.2rem;
       }
       .univ-info {
-        font-size: 1.3rem;
+        font-size: 4vw;
         margin-bottom: 3rem;
+      }
+      .icons {
+        a {
+          .fa-2x {
+            font-size: 2.2em;
+          }
+        }
       }
     }
   }
   .m-menu {
     &-btn {
       &.close {
-        padding: 0.7rem;
-        margin-left: 10px;
-        bottom: 2.4vh;
+        padding: 2vw;
+        // margin-left: 10px;
+        // bottom: 2.4vh;
       }
     }
     &.show {
       visibility: visible;
     }
+    .icons {
+      margin-bottom: 1.5vh;
+      a {
+        margin: 0 4vw 0 7vw;
+      }
+    }
   }
-
   .menu {
     &-btn {
       visibility: hidden;
@@ -209,12 +296,10 @@
       visibility: hidden;
     }
   }
-
   .menu-nav {
     background-color: rgba(44, 50, 55, 0.95);
     height: 100vh;
   }
-
   .mobile-header {
     visibility: visible;
   }
@@ -265,7 +350,6 @@
     font-weight: 400;
     font-size: 0.9rem;
   }
-
   #about {
     background: linear-gradient(
       180deg,
@@ -288,34 +372,37 @@
         .heads {
           .headshot {
             margin-left: 0.5rem;
+            padding: 2rem;
           }
         }
         .bio-text {
-          padding: 0.5rem;
-          font-weight: 600;
-          font-size: 0.95rem;
-        }
-      }
-      .pro-title {
-        margin-top: 4rem;
-        margin-bottom: -3rem;
-        margin-left: -8rem;
-      }
-      .projects {
-        flex-direction: column;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-
-        .project {
-          width: 95%;
-          padding: 1rem;
-          margin-left: 0rem;
-          margin-bottom: 1rem;
+          padding: 0 2.5rem 2.5rem 2.5rem;
+          font-weight: 400;
+          font-size: 1rem;
         }
       }
     }
   }
-
+  #my-projects {
+    .contain {
+      .projects {
+        padding: 0.5rem;
+        margin-left: 0;
+        font-size: 0.95rem;
+        .project {
+          flex-basis: 100%;
+          margin-left: 0;
+          padding: 0.5rem;
+          .headshot {
+            height: auto;
+            width: 100%;
+          }
+        }
+        .project1 {
+        }
+      }
+    }
+  }
   //Contact
   #contact {
     margin-left: 0rem;
@@ -343,43 +430,138 @@
     }
   }
 }
+@include small-phone {
+  #home {
+    .lg-heading {
+      font-size: 12vw;
+      line-height: 1.25;
+      margin-bottom: 1rem;
+    }
+    .icons {
+      margin-left: auto;
+      width: 115%;
+    }
+    .sm-heading {
+      margin-left: 0;
+      font-size: 5.5vw;
+    }
+    .univ-info {
+      margin-left: 0;
+      font-size: 5vw;
+    }
+  }
+  #about {
+    .contain {
+      .bio {
+        width: 95vw;
+        margin-left: -1rem;
+        .heads {
+          padding: 2vw 0 5vw 0;
+          .headshot {
+            width: 90%;
+            left: 5%;
+            padding: 0;
+            margin-bottom: -0.75rem;
+          }
+        }
+        .bio-text {
+          padding: 0 6vw 0 6vw;
+          font-weight: 400;
+          font-size: 0.75rem;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+  #my-projects {
+    .contain {
+      .pro-title {
+        margin-top: 10vh;
+        margin-left: 5vw;
+        font-size: 1.5em;
+      }
+      .projects {
+        padding: 0.5rem;
+        margin-left: 0;
+        font-size: 0.85rem;
+        .project {
+          flex-basis: 100%;
+          margin-left: 0;
+          padding: 0.5rem;
+          .headshot {
+            height: 30vh;
+            width: 100%;
+          }
+        }
+        .project1 {
+        }
+      }
+    }
+  }
+  .mobile-header {
+    .m-menu-btn {
+      padding: 15px;
 
-@include mediaXs {
+      &.close {
+        bottom: 4.25vh;
+        padding: 0;
+      }
+    }
+  }
+  .m-menu {
+    .icons {
+      margin-bottom: 1.5vh;
+      a {
+        margin: 0 3vw 0 7vw;
+      }
+      .fa-2x {
+        font-size: 1.75em;
+      }
+    }
+  }
   #main-header {
     .fix-name {
       margin-left: 0;
     }
   }
-  #home {
-    padding: 2rem;
-    .icons {
-      margin-left: 0.9rem;
-    }
-    .leftSide {
-      width: 100vw;
-      margin-left: -2.1rem;
-    }
-  }
-
-  #about {
-    .contain {
-      margin-left: 0.75rem;
-      .bio {
-      }
-      .pro-title {
-        font-size: 2.5rem;
-        margin-left: -9.75rem;
-      }
-
-      .projects {
-        margin-left: 0;
-        .project {
-          padding: 1rem;
-        }
-        .headshot {
-          height: 14rem !important;
-        }
-      }
-    }
-  }
 }
+
+// @include small-screen-phone-only {
+//   #main-header {
+//     .fix-name {
+//       margin-left: 0;
+//     }
+//   }
+//   #home {
+//     padding: 2rem;
+//     .icons {
+//       margin-left: 0.9rem;
+//     }
+//     .leftSide {
+//       width: 100vw;
+//       margin-left: -2.1rem;
+//     }
+//   }
+
+//   #about {
+//     .contain {
+//       margin-left: 0.75rem;
+//       .bio {
+//       }
+//       .pro-title {
+//         font-size: 2.5rem;
+//         margin-left: -9.75rem;
+//       }
+
+//       .projects {
+//         margin-left: 0;
+//         .project {
+//           padding: 1rem;
+//         }
+//         .headshot {
+//           height: 14rem !important;
+//         }
+//       }
+//     }
+//   }
+// }

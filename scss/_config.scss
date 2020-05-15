@@ -28,28 +28,29 @@ $background-opacity: 0.3;
   }
 }
 // Media Query Mixins
-@mixin mediaXs {
-  @media screen and (max-width: 400px) {
+
+@mixin small-phone {
+  @media screen and (max-width: 370px) {
     @content;
   }
 }
-@mixin mediaSm {
-  @media screen and (max-width: 500px) {
+@mixin phone-portrait-only {
+  @media screen and (max-width: 600px) {
     @content;
   }
 }
-@mixin mediaMd {
-  @media screen and (max-width: 768px) {
+@mixin tablet-portrait-only {
+  @media screen and (min-width: 600px) and (max-width: 900px) {
     @content;
   }
 }
-@mixin mediaLg {
-  @media screen and (min-width: 769px) and (max-width: 1170px) {
+@mixin tablet-landscape-up {
+  @media screen and (min-width: 900px) {
     @content;
   }
 }
-@mixin mediaXl {
-  @media screen and (min-width: 1171px) {
+@mixin desktop-up {
+  @media screen and (min-width: 1200.1px) {
     @content;
   }
 }

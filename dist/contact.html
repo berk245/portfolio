@@ -19,18 +19,25 @@
         <div class="m-btn-line"></div>
       </div>
     </div>
-    <nav class="m-menu m-ab">
+    <nav class="m-menu">
       <ul class="m-menu-nav">
         <li class="m-nav-item">
           <div class="icons">
             <a href="contact.html">
-              <i class=" current far fa-envelope fa-2x"></i>
+              <i class="current far fa-envelope fa-2x"></i>
+            </a>
+            <a href="projects.html">
+              <i class="fas fa-laptop-code fa-2x"></i>
             </a>
             <a href="about.html">
-              <i class=" far fa-user fa-2x"></i>
+              <i class="far fa-user fa-2x"></i>
             </a>
+
             <a href="index.html">
               <i class="fas fa-home fa-2x"></i>
+            </a>
+            <a>
+              <i class="fas fa-times fa-2x menu-close"></i>
             </a>
           </div>
         </li>
@@ -44,9 +51,13 @@
         <a class="current" href="contact.html">
           <i class="far fa-envelope fa-2x"></i>
         </a>
+        <a href="projects.html">
+          <i class="fas fa-laptop-code fa-2x"></i>
+        </a>
         <a href="about.html">
           <i class="fas fa-user fa-2x"></i>
         </a>
+
         <a href="index.html">
           <i class="fas fa-home fa-2x"></i>
         </a>
@@ -88,28 +99,30 @@
     const MmenuBtn = document.querySelector(".m-menu-btn");
     const Mmenu = document.querySelector(".m-menu");
     const MmenuNav = document.querySelector(".m-menu-nav");
+    const closeIcon = document.querySelector(".menu-close");
     const MnavItems = document.querySelectorAll(".m-nav-item");
     const Mline = document.querySelectorAll(".m-btn-line");
 
     let MshowMenu = false;
 
     MmenuBtn.addEventListener("click", mobileMenu);
+    closeIcon.addEventListener("click", mobileMenu);
 
     function mobileMenu() {
       if (!MshowMenu) {
         MmenuBtn.classList.add("close");
         Mmenu.classList.add("show");
         MmenuNav.classList.add("show");
-        MnavItems.forEach(item => item.classList.add("show"));
-        Mline.forEach(item => item.classList.add("close"));
+        MnavItems.forEach((item) => item.classList.add("show"));
+        Mline.forEach((item) => item.classList.add("close"));
 
         MshowMenu = true;
       } else {
         MmenuBtn.classList.remove("close");
         Mmenu.classList.remove("show");
         MmenuNav.classList.remove("show");
-        MnavItems.forEach(item => item.classList.remove("show"));
-        Mline.forEach(item => item.classList.remove("close"));
+        MnavItems.forEach((item) => item.classList.remove("show"));
+        Mline.forEach((item) => item.classList.remove("close"));
         MshowMenu = false;
       }
     }

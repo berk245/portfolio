@@ -54,12 +54,8 @@
       float: none; }
   .m-menu-btn.close {
     transform: rotate(180deg); }
-    .m-menu-btn.close .m-btn-line:nth-child(1) {
-      transform: rotate(45deg) translate(5px, 5px); }
-    .m-menu-btn.close .m-btn-line:nth-child(2) {
+    .m-menu-btn.close .m-btn-line {
       opacity: 0; }
-    .m-menu-btn.close .m-btn-line:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -5.7px); }
 
 .menu {
   position: fixed;
@@ -122,7 +118,7 @@
   visibility: hidden;
   overflow: hidden; }
   .m-menu .icons {
-    margin-left: -4rem;
+    margin-left: -1rem;
     margin-bottom: 0.3rem; }
     .m-menu .icons a {
       margin: 0 60px 0 10px; }
@@ -309,12 +305,10 @@ body {
 
 #about {
   min-height: 100vh;
+  overflow: hidden;
   align-items: center;
   background: linear-gradient(180deg, rgba(44, 50, 55, 0) 0%, #131517 70%); }
   #about .contain {
-    margin-top: 5rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
     width: 95%;
     display: flex;
     flex-direction: column;
@@ -329,11 +323,11 @@ body {
         flex-basis: 100%; }
         #about .contain .bio .heads .headshot {
           z-index: 0;
-          height: 70%;
-          width: 80%;
+          height: auto;
+          width: 100%;
           position: relative;
           top: 15%;
-          left: 10%; }
+          left: 0%; }
       #about .contain .bio .bio-text {
         text-align: justify;
         padding: 1rem;
@@ -343,58 +337,61 @@ body {
           color: #eece1a; }
           #about .contain .bio .bio-text a:hover {
             text-decoration: underline; }
-    #about .contain .pro-title {
-      margin-top: 10rem;
-      font-size: 4rem;
-      margin-bottom: -1rem; }
-    #about .contain .projects {
+
+#my-projects {
+  background: linear-gradient(180deg, rgba(44, 50, 55, 0) 0%, #131517 70%); }
+  #my-projects .contain .pro-title {
+    margin-top: 10rem;
+    font-size: 1rem;
+    margin-bottom: -1rem; }
+  #my-projects .contain .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-self: center;
+    width: 100%;
+    margin-left: 2.5rem;
+    margin-top: 5rem; }
+    #my-projects .contain .projects .project {
+      flex-basis: 40%;
+      background-color: rgba(44, 50, 55, 0.5);
+      margin-left: 10px;
+      margin-bottom: 5rem;
+      padding: 2rem; }
+      #my-projects .contain .projects .project1, #my-projects .contain .projects .project3 {
+        margin-left: -2.5rem; }
+      #my-projects .contain .projects .project img {
+        width: 100%;
+        height: 1rem; }
+    #my-projects .contain .projects .project-headers {
+      margin-left: 0.3rem;
+      margin-bottom: 2rem; }
+      #my-projects .contain .projects .project-headers h2,
+      #my-projects .contain .projects .project-headers h4 {
+        margin-bottom: -0.5rem; }
+    #my-projects .contain .projects .buttons {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      align-self: center;
-      width: 100%;
-      margin-left: 2.5rem;
-      margin-top: 5rem; }
-      #about .contain .projects .project {
-        flex-basis: 40%;
-        background-color: rgba(44, 50, 55, 0.5);
-        margin-left: 10px;
-        margin-bottom: 5rem;
-        padding: 2rem; }
-        #about .contain .projects .project1, #about .contain .projects .project3 {
-          margin-left: -2.5rem; }
-        #about .contain .projects .project img {
-          width: 100%;
-          height: 20rem; }
-      #about .contain .projects .project-headers {
-        margin-left: 0.3rem;
-        margin-bottom: 2rem; }
-        #about .contain .projects .project-headers h2,
-        #about .contain .projects .project-headers h4 {
-          margin-bottom: -0.5rem; }
-      #about .contain .projects .buttons {
-        display: flex;
-        margin-bottom: 1rem; }
-        #about .contain .projects .buttons a {
-          margin: 1rem 0.5rem 0 0;
-          padding: 0.2rem;
-          text-align: center;
-          border: 0.7px solid #fff;
-          width: 100%;
-          height: 2rem;
-          background-color: rgba(44, 50, 55, 0);
-          font-size: 1rem;
-          font-weight: bold; }
-          #about .contain .projects .buttons a:hover {
-            background-color: #eece1a; }
-      #about .contain .projects .project-text {
-        margin-left: 0.3rem; }
-        #about .contain .projects .project-text a {
-          color: #eece1a; }
-          #about .contain .projects .project-text a:hover {
-            text-decoration: underline; }
-        #about .contain .projects .project-text ul {
-          list-style-type: circle; }
+      margin-bottom: 1rem; }
+      #my-projects .contain .projects .buttons a {
+        margin: 1rem 0.5rem 0 0;
+        padding: 0.2rem;
+        text-align: center;
+        border: 0.7px solid #fff;
+        width: 100%;
+        height: 2rem;
+        background-color: rgba(44, 50, 55, 0);
+        font-size: 1rem;
+        font-weight: bold; }
+        #my-projects .contain .projects .buttons a:hover {
+          background-color: #eece1a; }
+    #my-projects .contain .projects .project-text {
+      margin-left: 0.3rem; }
+      #my-projects .contain .projects .project-text a {
+        color: #eece1a; }
+        #my-projects .contain .projects .project-text a:hover {
+          text-decoration: underline; }
+      #my-projects .contain .projects .project-text ul {
+        list-style-type: circle; }
 
 #contact {
   margin-left: 1rem; }
@@ -413,23 +410,39 @@ body {
         color: #eece1a;
         transition: all 0.5s ease-out; }
 
-@media screen and (min-width: 1171px) {
+@media screen and (min-width: 1200.1px) {
   main {
     align-items: center; }
     main .leftSide.half {
+      text-align: left;
       width: 70vw;
       transition: all 0.5s ease-out; }
     main .lg-heading {
-      font-size: 6rem;
+      font-size: 6.5vw;
       line-height: 1;
       margin-bottom: 1rem; }
+    main .sm-heading {
+      font-size: 1.8vw; }
+    main .univ-info {
+      font-size: 1.6vw; }
   #about {
     overflow: hidden; }
     #about .contain .bio .heads {
-      flex-basis: 200%;
-      height: auto; } }
+      flex-basis: 100%;
+      height: auto; }
+  #my-projects .contain .projects {
+    padding: 0.5rem;
+    margin-left: 0;
+    font-size: 0.95rem; }
+    #my-projects .contain .projects .project {
+      flex-basis: 30% !important;
+      margin-left: 0;
+      padding: 0.5rem; }
+      #my-projects .contain .projects .project .headshot {
+        height: 15vw !important;
+        width: 100%; } }
 
-@media screen and (min-width: 769px) and (max-width: 1170px) {
+@media screen and (min-width: 900px) {
   main {
     align-items: center; }
     main .lg-heading {
@@ -440,23 +453,60 @@ body {
     margin-top: 28vh; }
     .menu-nav .noPhone {
       font-size: 0.8 rem; }
-  #about .contain .bio .bio-text {
-    font-size: 0.9rem; }
-  #about .contain .bio .heads {
-    flex-basis: 400%; }
-    #about .contain .bio .heads .headshot {
-      height: 50%; } }
+  #about {
+    overflow: scroll;
+    width: 100%; }
+    #about .contain {
+      margin: 5rem 0 0 2.5%;
+      height: 60vh; }
+      #about .contain .bio {
+        display: grid !important;
+        grid-template-columns: 40% 60%; }
+        #about .contain .bio .bio-text {
+          font-size: 1.25rem;
+          font-weight: 400; }
+        #about .contain .bio .bottom-text {
+          font-size: 1.25rem;
+          font-weight: 400;
+          padding: 0 1rem 0 1rem;
+          text-align: justify;
+          grid-column: 1 /-1; }
+        #about .contain .bio .heads .headshot {
+          height: auto;
+          width: 80%;
+          top: 10%;
+          left: 10%; }
+  #my-projects .contain .projects {
+    padding: 0.5rem;
+    margin-left: 0;
+    font-size: 0.95rem; }
+    #my-projects .contain .projects .project {
+      flex-basis: 45%;
+      margin-left: 0;
+      padding: 0.5rem; }
+      #my-projects .contain .projects .project .headshot {
+        height: 30vw;
+        width: 100%; } }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 600px) and (max-width: 900px) {
   main {
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    margin-bottom: -1rem; }
     main .leftSide {
-      margin-top: -3rem; }
+      margin-top: -5vw; }
     main .lg-heading {
-      font-size: 65px;
+      margin-top: 15vh !important;
+      font-size: 4.25rem;
       line-height: 1;
-      margin-bottom: 1rem; }
+      margin-bottom: 2rem; }
+    main .sm-heading {
+      font-size: 1.8rem;
+      margin-left: 0; }
+    main .univ-info {
+      margin-left: 0;
+      margin-bottom: 2.25rem;
+      font-size: 1.4rem; }
     main .icons {
       margin-left: 1.8rem; }
   .menu {
@@ -468,7 +518,7 @@ body {
     vertical-align: middle;
     transform: translate3d(100%, 0%, 0); }
   .menu-nav {
-    margin: 0;
+    margin: -3vw;
     transform: translate3d(0%, 0, 0);
     margin-top: 3vh; }
     .menu-nav .noPhone {
@@ -480,31 +530,35 @@ body {
   #about {
     background: linear-gradient(180deg, rgba(44, 50, 55, 0) 0%, #131517 30%); }
     #about .contain {
-      width: 95vw;
+      width: 100vw;
       margin-left: 0.6rem;
       margin-top: 5rem;
       align-self: center; }
       #about .contain .bio {
-        flex-direction: column;
-        padding: 1rem; }
-        #about .contain .bio .heads .headshot {
-          margin-left: 1rem; }
-          #about .contain .bio .heads .headshot img {
-            height: 20%; }
-      #about .contain .pro-title {
-        margin-top: 4rem;
-        font-size: 3rem;
-        margin-bottom: -2rem;
-        margin-left: -3.5rem; }
-      #about .contain .projects {
+        width: 95%;
+        margin-top: -0rem;
+        margin-left: -1.5rem;
         flex-direction: column; }
-        #about .contain .projects .project {
-          width: 95%;
-          padding: 1rem;
-          margin-left: 1rem;
-          margin-bottom: 1rem; } }
+        #about .contain .bio .heads .headshot {
+          margin-left: 0.5rem;
+          padding: 2rem; }
+        #about .contain .bio .bio-text {
+          padding: 0 2.5rem 2.5rem 2.5rem;
+          font-weight: 400;
+          font-size: 1.3rem; }
+  #my-projects .contain .projects {
+    padding: 0.5rem;
+    margin-left: 0;
+    font-size: 0.95rem; }
+    #my-projects .contain .projects .project {
+      flex-basis: 45%;
+      margin-left: 0;
+      padding: 0.5rem; }
+      #my-projects .contain .projects .project .headshot {
+        height: 30vw;
+        width: 100%; } }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   main {
     text-align: center; }
     main .noPhone {
@@ -512,25 +566,28 @@ body {
     main .leftSide {
       height: auto;
       width: 90vw;
-      margin-top: -3rem;
+      margin-top: -3vh;
       margin-left: -2.5rem; }
       main .leftSide .lg-heading {
-        font-size: 3.5rem;
         font-weight: 600;
-        font-size: 65px;
-        margin-bottom: 3rem; }
+        font-size: 12vw;
+        margin-bottom: 2rem; }
       main .leftSide .sm-heading {
-        font-size: 1.4rem;
+        font-size: 5vw;
         margin-bottom: 1.2rem; }
       main .leftSide .univ-info {
-        font-size: 1.3rem;
+        font-size: 4vw;
         margin-bottom: 3rem; }
+      main .leftSide .icons a .fa-2x {
+        font-size: 2.2em; }
   .m-menu-btn.close {
-    padding: 0.7rem;
-    margin-left: 10px;
-    bottom: 2.4vh; }
+    padding: 2vw; }
   .m-menu.show {
     visibility: visible; }
+  .m-menu .icons {
+    margin-bottom: 1.5vh; }
+    .m-menu .icons a {
+      margin: 0 4vw 0 7vw; }
   .menu-btn {
     visibility: hidden; }
   .menu.show {
@@ -584,24 +641,23 @@ body {
         margin-left: -1.5rem;
         flex-direction: column; }
         #about .contain .bio .heads .headshot {
-          margin-left: 0.5rem; }
+          margin-left: 0.5rem;
+          padding: 2rem; }
         #about .contain .bio .bio-text {
-          padding: 0.5rem;
-          font-weight: 600;
-          font-size: 0.95rem; }
-      #about .contain .pro-title {
-        margin-top: 4rem;
-        margin-bottom: -3rem;
-        margin-left: -8rem; }
-      #about .contain .projects {
-        flex-direction: column;
-        margin-left: 0.5rem;
-        margin-right: 0.5rem; }
-        #about .contain .projects .project {
-          width: 95%;
-          padding: 1rem;
-          margin-left: 0rem;
-          margin-bottom: 1rem; }
+          padding: 0 2.5rem 2.5rem 2.5rem;
+          font-weight: 400;
+          font-size: 1rem; }
+  #my-projects .contain .projects {
+    padding: 0.5rem;
+    margin-left: 0;
+    font-size: 0.95rem; }
+    #my-projects .contain .projects .project {
+      flex-basis: 100%;
+      margin-left: 0;
+      padding: 0.5rem; }
+      #my-projects .contain .projects .project .headshot {
+        height: auto;
+        width: 100%; }
   #contact {
     margin-left: 0rem;
     text-align: center; }
@@ -620,24 +676,60 @@ body {
         margin-right: 3rem;
         color: #eece1a; } }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 370px) {
+  #home .lg-heading {
+    font-size: 12vw;
+    line-height: 1.25;
+    margin-bottom: 1rem; }
+  #home .icons {
+    margin-left: auto;
+    width: 115%; }
+  #home .sm-heading {
+    margin-left: 0;
+    font-size: 5.5vw; }
+  #home .univ-info {
+    margin-left: 0;
+    font-size: 5vw; }
+  #about .contain .bio {
+    width: 95vw;
+    margin-left: -1rem; }
+    #about .contain .bio .heads {
+      padding: 2vw 0 5vw 0; }
+      #about .contain .bio .heads .headshot {
+        width: 90%;
+        left: 5%;
+        padding: 0;
+        margin-bottom: -0.75rem; }
+    #about .contain .bio .bio-text {
+      padding: 0 6vw 0 6vw;
+      font-weight: 400;
+      font-size: 0.75rem;
+      line-height: 1.4; }
+  #my-projects .contain .pro-title {
+    margin-top: 10vh;
+    margin-left: 5vw;
+    font-size: 1.5em; }
+  #my-projects .contain .projects {
+    padding: 0.5rem;
+    margin-left: 0;
+    font-size: 0.85rem; }
+    #my-projects .contain .projects .project {
+      flex-basis: 100%;
+      margin-left: 0;
+      padding: 0.5rem; }
+      #my-projects .contain .projects .project .headshot {
+        height: 30vh;
+        width: 100%; }
+  .mobile-header .m-menu-btn {
+    padding: 15px; }
+    .mobile-header .m-menu-btn.close {
+      bottom: 4.25vh;
+      padding: 0; }
+  .m-menu .icons {
+    margin-bottom: 1.5vh; }
+    .m-menu .icons a {
+      margin: 0 3vw 0 7vw; }
+    .m-menu .icons .fa-2x {
+      font-size: 1.75em; }
   #main-header .fix-name {
-    margin-left: 0; }
-  #home {
-    padding: 2rem; }
-    #home .icons {
-      margin-left: 0.9rem; }
-    #home .leftSide {
-      width: 100vw;
-      margin-left: -2.1rem; }
-  #about .contain {
-    margin-left: 0.75rem; }
-    #about .contain .pro-title {
-      font-size: 2.5rem;
-      margin-left: -9.75rem; }
-    #about .contain .projects {
-      margin-left: 0; }
-      #about .contain .projects .project {
-        padding: 1rem; }
-      #about .contain .projects .headshot {
-        height: 14rem !important; } }
+    margin-left: 0; } }
