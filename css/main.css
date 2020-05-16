@@ -328,8 +328,6 @@ body {
           position: relative;
           top: 15%;
           left: 0%; }
-          #about .contain .bio .heads .headshot.wide-only {
-            display: none; }
       #about .contain .bio .bio-text {
         text-align: justify;
         padding: 1rem;
@@ -561,6 +559,8 @@ body {
         #about .contain .bio .heads .headshot {
           margin-left: 0.5rem;
           padding: 2rem; }
+          #about .contain .bio .heads .headshot.wide-only {
+            display: none; }
         #about .contain .bio .bio-text {
           padding: 0 2.5rem 2.5rem 2.5rem;
           font-weight: 400;
@@ -662,6 +662,8 @@ body {
         #about .contain .bio .heads .headshot {
           margin-left: 0.5rem;
           padding: 2rem; }
+          #about .contain .bio .heads .headshot.wide-only {
+            display: none; }
         #about .contain .bio .bio-text {
           padding: 0 2.5rem 2.5rem 2.5rem;
           font-weight: 400;
@@ -719,6 +721,8 @@ body {
         left: 5%;
         padding: 0;
         margin-bottom: -0.75rem; }
+        #about .contain .bio .heads .headshot.wide-only {
+          display: none; }
     #about .contain .bio .bio-text {
       padding: 0 6vw 0 6vw;
       font-weight: 400;
