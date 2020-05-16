@@ -226,6 +226,9 @@
           .headshot {
             margin-left: 0.5rem;
             padding: 2rem;
+            &.wide-only {
+              display: none;
+            }
           }
         }
         .bio-text {
@@ -397,6 +400,9 @@
           .headshot {
             margin-left: 0.5rem;
             padding: 2rem;
+            &.wide-only {
+              display: none;
+            }
           }
         }
         .bio-text {
@@ -486,6 +492,9 @@
             left: 5%;
             padding: 0;
             margin-bottom: -0.75rem;
+            &.wide-only {
+              display: none;
+            }
           }
         }
         .bio-text {
